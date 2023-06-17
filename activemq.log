@@ -1,0 +1,776 @@
+2018-03-10 22:49:06,427 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@59ec2012: startup date [Sat Mar 10 22:49:06 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-03-10 22:49:07,234 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:49:08,904 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-03-10 22:49:09,059 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55359-1520702348916-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:49:09,075 | INFO  | Listening for connections at: tcp://DESKTOP-55AGI0I:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-03-10 22:49:09,077 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:49:09,080 | ERROR | Failed to start Apache ActiveMQ ([localhost, ID:DESKTOP-55AGI0I-55359-1520702348916-0:1], java.io.IOException: Transport Connector could not be registered in JMX: java.io.IOException: Failed to bind to server socket: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Address already in use: JVM_Bind) | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:49:09,082 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55359-1520702348916-0:1) is shutting down | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:49:09,084 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:49:09,087 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:49:09,089 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:49:09,091 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:49:09,093 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:49:09,096 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\..\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-03-10 22:49:09,097 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | main
+2018-03-10 22:49:09,098 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | main
+2018-03-10 22:49:09,099 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | main
+2018-03-10 22:49:09,251 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55359-1520702348916-0:1) uptime 2.030 seconds | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:49:09,252 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55359-1520702348916-0:1) is shutdown | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:49:09,253 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@59ec2012: startup date [Sat Mar 10 22:49:06 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-03-10 22:49:09,256 | WARN  | Exception thrown from LifecycleProcessor on context close | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context: org.apache.activemq.xbean.XBeanBrokerFactory$1@59ec2012: startup date [Sat Mar 10 22:49:06 IST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getLifecycleProcessor(AbstractApplicationContext.java:357)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:884)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:843)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.apache.activemq.hooks.SpringContextHook.run(SpringContextHook.java:30)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerService.stop(BrokerService.java:875)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerService.stop(XBeanBrokerService.java:122)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerService.start(BrokerService.java:629)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerService.afterPropertiesSet(XBeanBrokerService.java:73)[activemq-spring-5.14.0.jar:5.14.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Unknown Source)[:1.8.0_161]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1700)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1639)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1568)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)[xbean-spring-3.18.jar:3.18]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)[xbean-spring-3.18.jar:3.18]
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)[activemq-console-5.14.0.jar:5.14.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Unknown Source)[:1.8.0_161]
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)[activemq.jar:5.14.0]
+	at org.apache.activemq.console.Main.main(Main.java:115)[activemq.jar:5.14.0]
+2018-03-10 22:49:09,260 | WARN  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Invocation of init method failed; nested exception is java.io.IOException: Transport Connector could not be registered in JMX: java.io.IOException: Failed to bind to server socket: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Address already in use: JVM_Bind | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-03-10 22:56:03,139 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@402a079c: startup date [Sat Mar 10 22:56:03 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-03-10 22:56:03,737 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:56:04,171 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-03-10 22:56:04,191 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-03-10 22:56:04,339 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55661-1520702764201-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:56:04,354 | INFO  | Listening for connections at: tcp://DESKTOP-55AGI0I:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-03-10 22:56:04,356 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:56:04,361 | ERROR | Failed to start Apache ActiveMQ ([localhost, ID:DESKTOP-55AGI0I-55661-1520702764201-0:1], java.io.IOException: Transport Connector could not be registered in JMX: java.io.IOException: Failed to bind to server socket: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Address already in use: JVM_Bind) | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:56:04,363 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55661-1520702764201-0:1) is shutting down | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:56:04,366 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:56:04,367 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:56:04,369 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:56:04,371 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:56:04,373 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:56:04,377 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\..\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-03-10 22:56:04,378 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | main
+2018-03-10 22:56:04,380 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | main
+2018-03-10 22:56:04,383 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | main
+2018-03-10 22:56:04,564 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55661-1520702764201-0:1) uptime 0.799 seconds | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:56:04,566 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55661-1520702764201-0:1) is shutdown | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:56:04,567 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@402a079c: startup date [Sat Mar 10 22:56:03 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-03-10 22:56:04,571 | WARN  | Exception thrown from LifecycleProcessor on context close | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context: org.apache.activemq.xbean.XBeanBrokerFactory$1@402a079c: startup date [Sat Mar 10 22:56:03 IST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getLifecycleProcessor(AbstractApplicationContext.java:357)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:884)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:843)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.apache.activemq.hooks.SpringContextHook.run(SpringContextHook.java:30)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerService.stop(BrokerService.java:875)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerService.stop(XBeanBrokerService.java:122)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerService.start(BrokerService.java:629)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerService.afterPropertiesSet(XBeanBrokerService.java:73)[activemq-spring-5.14.0.jar:5.14.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Unknown Source)[:1.8.0_161]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1700)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1639)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1568)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)[xbean-spring-3.18.jar:3.18]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)[xbean-spring-3.18.jar:3.18]
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)[activemq-console-5.14.0.jar:5.14.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Unknown Source)[:1.8.0_161]
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)[activemq.jar:5.14.0]
+	at org.apache.activemq.console.Main.main(Main.java:115)[activemq.jar:5.14.0]
+2018-03-10 22:56:04,575 | WARN  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Invocation of init method failed; nested exception is java.io.IOException: Transport Connector could not be registered in JMX: java.io.IOException: Failed to bind to server socket: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Address already in use: JVM_Bind | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-03-10 22:58:36,504 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@402a079c: startup date [Sat Mar 10 22:58:36 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-03-10 22:58:37,140 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:58:37,339 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-03-10 22:58:37,362 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-03-10 22:58:37,513 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55759-1520702917372-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:58:37,528 | INFO  | Listening for connections at: tcp://DESKTOP-55AGI0I:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-03-10 22:58:37,529 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:58:37,533 | ERROR | Failed to start Apache ActiveMQ ([localhost, ID:DESKTOP-55AGI0I-55759-1520702917372-0:1], java.io.IOException: Transport Connector could not be registered in JMX: java.io.IOException: Failed to bind to server socket: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Address already in use: JVM_Bind) | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:58:37,535 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55759-1520702917372-0:1) is shutting down | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:58:37,538 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:58:37,539 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:58:37,540 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:58:37,542 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:58:37,544 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | main
+2018-03-10 22:58:37,546 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\..\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-03-10 22:58:37,547 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | main
+2018-03-10 22:58:37,548 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | main
+2018-03-10 22:58:37,549 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | main
+2018-03-10 22:58:37,697 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55759-1520702917372-0:1) uptime 0.567 seconds | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:58:37,698 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55759-1520702917372-0:1) is shutdown | org.apache.activemq.broker.BrokerService | main
+2018-03-10 22:58:37,699 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@402a079c: startup date [Sat Mar 10 22:58:36 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-03-10 22:58:37,736 | WARN  | Exception thrown from LifecycleProcessor on context close | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context: org.apache.activemq.xbean.XBeanBrokerFactory$1@402a079c: startup date [Sat Mar 10 22:58:36 IST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getLifecycleProcessor(AbstractApplicationContext.java:357)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:884)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:843)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.apache.activemq.hooks.SpringContextHook.run(SpringContextHook.java:30)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerService.stop(BrokerService.java:875)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerService.stop(XBeanBrokerService.java:122)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerService.start(BrokerService.java:629)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerService.afterPropertiesSet(XBeanBrokerService.java:73)[activemq-spring-5.14.0.jar:5.14.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Unknown Source)[:1.8.0_161]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1700)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1639)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1568)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)[xbean-spring-3.18.jar:3.18]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)[xbean-spring-3.18.jar:3.18]
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)[activemq-console-5.14.0.jar:5.14.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Unknown Source)[:1.8.0_161]
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)[activemq.jar:5.14.0]
+	at org.apache.activemq.console.Main.main(Main.java:115)[activemq.jar:5.14.0]
+2018-03-10 22:58:37,740 | WARN  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Invocation of init method failed; nested exception is java.io.IOException: Transport Connector could not be registered in JMX: java.io.IOException: Failed to bind to server socket: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Address already in use: JVM_Bind | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-03-10 23:04:05,973 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@3c241a88: startup date [Sat Mar 10 23:04:05 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | WrapperSimpleAppMain
+2018-03-10 23:04:06,801 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\kahadb] | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-10 23:04:07,730 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2018-03-10 23:04:07,745 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | WrapperSimpleAppMain
+2018-03-10 23:04:07,870 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55907-1520703247745-0:1) is starting | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-10 23:04:07,886 | INFO  | Listening for connections at: tcp://DESKTOP-55AGI0I:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-10 23:04:07,886 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:04:07,886 | ERROR | Failed to start Apache ActiveMQ ([localhost, ID:DESKTOP-55AGI0I-55907-1520703247745-0:1], java.io.IOException: Transport Connector could not be registered in JMX: java.io.IOException: Failed to bind to server socket: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Address already in use: JVM_Bind) | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-10 23:04:07,886 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55907-1520703247745-0:1) is shutting down | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-10 23:04:07,886 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:04:07,886 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:04:07,886 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:04:07,886 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:04:07,886 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:04:07,902 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | WrapperSimpleAppMain
+2018-03-10 23:04:07,902 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | WrapperSimpleAppMain
+2018-03-10 23:04:07,902 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | WrapperSimpleAppMain
+2018-03-10 23:04:07,933 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | WrapperSimpleAppMain
+2018-03-10 23:04:08,089 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55907-1520703247745-0:1) uptime 1.304 seconds | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-10 23:04:08,089 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55907-1520703247745-0:1) is shutdown | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-10 23:04:08,089 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@3c241a88: startup date [Sat Mar 10 23:04:05 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | WrapperSimpleAppMain
+2018-03-10 23:04:08,105 | WARN  | Exception thrown from LifecycleProcessor on context close | org.apache.activemq.xbean.XBeanBrokerFactory$1 | WrapperSimpleAppMain
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context: org.apache.activemq.xbean.XBeanBrokerFactory$1@3c241a88: startup date [Sat Mar 10 23:04:05 IST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getLifecycleProcessor(AbstractApplicationContext.java:357)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:884)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:843)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.apache.activemq.hooks.SpringContextHook.run(SpringContextHook.java:30)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerService.stop(BrokerService.java:875)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerService.stop(XBeanBrokerService.java:122)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerService.start(BrokerService.java:629)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerService.afterPropertiesSet(XBeanBrokerService.java:73)[activemq-spring-5.14.0.jar:5.14.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Unknown Source)[:1.8.0_161]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1700)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1639)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1568)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)[xbean-spring-3.18.jar:3.18]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)[xbean-spring-3.18.jar:3.18]
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)[activemq-console-5.14.0.jar:5.14.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Unknown Source)[:1.8.0_161]
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)[activemq.jar:5.14.0]
+	at org.apache.activemq.console.Main.main(Main.java:115)[activemq.jar:5.14.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Unknown Source)[:1.8.0_161]
+	at org.tanukisoftware.wrapper.WrapperSimpleApp.run(WrapperSimpleApp.java:240)[wrapper.jar:3.2.3]
+	at java.lang.Thread.run(Unknown Source)[:1.8.0_161]
+2018-03-10 23:04:08,120 | WARN  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Invocation of init method failed; nested exception is java.io.IOException: Transport Connector could not be registered in JMX: java.io.IOException: Failed to bind to server socket: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Address already in use: JVM_Bind | org.apache.activemq.xbean.XBeanBrokerFactory$1 | WrapperSimpleAppMain
+2018-03-10 23:05:16,729 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@3c241a88: startup date [Sat Mar 10 23:05:16 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | WrapperSimpleAppMain
+2018-03-10 23:05:17,339 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win32\..\..\data\kahadb] | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-10 23:05:17,433 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2018-03-10 23:05:17,448 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win32\..\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | WrapperSimpleAppMain
+2018-03-10 23:05:17,605 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55914-1520703317464-0:1) is starting | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-10 23:05:17,620 | INFO  | Listening for connections at: tcp://DESKTOP-55AGI0I:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-10 23:05:17,620 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:05:17,620 | ERROR | Failed to start Apache ActiveMQ ([localhost, ID:DESKTOP-55AGI0I-55914-1520703317464-0:1], java.io.IOException: Transport Connector could not be registered in JMX: java.io.IOException: Failed to bind to server socket: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Address already in use: JVM_Bind) | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-10 23:05:17,620 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55914-1520703317464-0:1) is shutting down | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-10 23:05:17,620 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:05:17,620 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:05:17,620 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:05:17,636 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:05:17,636 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:05:17,636 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win32\..\..\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | WrapperSimpleAppMain
+2018-03-10 23:05:17,636 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | WrapperSimpleAppMain
+2018-03-10 23:05:17,636 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | WrapperSimpleAppMain
+2018-03-10 23:05:17,636 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | WrapperSimpleAppMain
+2018-03-10 23:05:17,823 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55914-1520703317464-0:1) uptime 0.500 seconds | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-10 23:05:17,823 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55914-1520703317464-0:1) is shutdown | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-10 23:05:17,823 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@3c241a88: startup date [Sat Mar 10 23:05:16 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | WrapperSimpleAppMain
+2018-03-10 23:05:17,823 | WARN  | Exception thrown from LifecycleProcessor on context close | org.apache.activemq.xbean.XBeanBrokerFactory$1 | WrapperSimpleAppMain
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context: org.apache.activemq.xbean.XBeanBrokerFactory$1@3c241a88: startup date [Sat Mar 10 23:05:16 IST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getLifecycleProcessor(AbstractApplicationContext.java:357)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:884)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:843)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.apache.activemq.hooks.SpringContextHook.run(SpringContextHook.java:30)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerService.stop(BrokerService.java:875)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerService.stop(XBeanBrokerService.java:122)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerService.start(BrokerService.java:629)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerService.afterPropertiesSet(XBeanBrokerService.java:73)[activemq-spring-5.14.0.jar:5.14.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Unknown Source)[:1.8.0_161]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1700)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1639)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1568)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)[xbean-spring-3.18.jar:3.18]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)[xbean-spring-3.18.jar:3.18]
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)[activemq-spring-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)[activemq-broker-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.14.0.jar:5.14.0]
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)[activemq-console-5.14.0.jar:5.14.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Unknown Source)[:1.8.0_161]
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)[activemq.jar:5.14.0]
+	at org.apache.activemq.console.Main.main(Main.java:115)[activemq.jar:5.14.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)[:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Unknown Source)[:1.8.0_161]
+	at org.tanukisoftware.wrapper.WrapperSimpleApp.run(WrapperSimpleApp.java:240)[wrapper.jar:3.2.3]
+	at java.lang.Thread.run(Unknown Source)[:1.8.0_161]
+2018-03-10 23:05:17,933 | WARN  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Invocation of init method failed; nested exception is java.io.IOException: Transport Connector could not be registered in JMX: java.io.IOException: Failed to bind to server socket: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Address already in use: JVM_Bind | org.apache.activemq.xbean.XBeanBrokerFactory$1 | WrapperSimpleAppMain
+2018-03-10 23:06:34,394 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@84203da: startup date [Sat Mar 10 23:06:34 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | WrapperSimpleAppMain
+2018-03-10 23:06:34,972 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\kahadb] | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-10 23:06:35,066 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2018-03-10 23:06:35,081 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | WrapperSimpleAppMain
+2018-03-10 23:06:35,222 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55927-1520703395097-0:1) is starting | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-10 23:06:35,238 | INFO  | Listening for connections at: tcp://DESKTOP-55AGI0I:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-10 23:06:35,238 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:06:35,238 | INFO  | Listening for connections at: amqp://DESKTOP-55AGI0I:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-10 23:06:35,238 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:06:35,269 | INFO  | Listening for connections at: stomp://DESKTOP-55AGI0I:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-10 23:06:35,269 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:06:35,301 | INFO  | Listening for connections at: mqtt://DESKTOP-55AGI0I:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-10 23:06:35,301 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:06:35,503 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@78e8e5cf{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | WrapperSimpleAppMain
+2018-03-10 23:06:35,581 | INFO  | Listening for connections at ws://DESKTOP-55AGI0I:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | WrapperSimpleAppMain
+2018-03-10 23:06:35,581 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-10 23:06:35,581 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55927-1520703395097-0:1) started | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-10 23:06:35,581 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-10 23:06:36,253 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | WrapperSimpleAppMain
+2018-03-10 23:06:36,740 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | WrapperSimpleAppMain
+2018-03-10 23:06:36,740 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | WrapperSimpleAppMain
+2018-03-10 23:06:36,881 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | WrapperSimpleAppMain
+2018-03-10 23:06:37,147 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | WrapperSimpleAppMain
+2018-03-10 23:06:37,303 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | WrapperSimpleAppMain
+2018-03-10 23:47:37,998 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@4efe7122[p=1,l=244,c=16384,r=243]={\x00<<<\x00\x00\xF0\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>me/64.0.3282.186 ...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-10 23:47:38,008 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@42c63cb5{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-10 23:47:38,055 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=244,c=16384,r=243]={\x00<<<\x00\x00\xF0\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>bKit/537.36 (KHTM...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-10 23:47:38,061 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@5c66cc9e{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-10 23:47:38,101 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@4efe7122[p=1,l=244,c=16384,r=243]={\x00<<<\x00\x00\xF0\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>me/64.0.3282.186 ...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-59
+2018-03-10 23:47:38,106 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@680e29aa{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-59
+2018-03-10 23:47:38,165 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=244,c=16384,r=243]={\x00<<<\x00\x00\xF0\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>bKit/537.36 (KHTM...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-10 23:47:38,173 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@7c188ae8{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-10 23:47:38,275 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@4efe7122[p=1,l=244,c=16384,r=243]={\x00<<<\x00\x00\xF0\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>me/64.0.3282.186 ...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-10 23:47:38,280 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@49e01d19{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-10 23:47:38,450 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=244,c=16384,r=243]={\x00<<<\x00\x00\xF0\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>bKit/537.36 (KHTM...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-59
+2018-03-10 23:47:38,451 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@470d50db{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-59
+2018-03-10 23:47:38,803 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@4efe7122[p=1,l=244,c=16384,r=243]={\x00<<<\x00\x00\xF0\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>me/64.0.3282.186 ...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-10 23:47:38,805 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@66de08c0{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-10 23:47:39,468 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=244,c=16384,r=243]={\x00<<<\x00\x00\xF0\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>bKit/537.36 (KHTM...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-10 23:47:39,470 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@10c6a4fa{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-10 23:47:40,780 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@4efe7122[p=1,l=244,c=16384,r=243]={\x00<<<\x00\x00\xF0\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>me/64.0.3282.186 ...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-59
+2018-03-10 23:47:40,783 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@7cea2d37{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-59
+2018-03-10 23:47:43,373 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=244,c=16384,r=243]={\x00<<<\x00\x00\xF0\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>bKit/537.36 (KHTM...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-10 23:47:43,375 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@13ff91bd{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-10 23:47:48,521 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@4efe7122[p=1,l=244,c=16384,r=243]={\x00<<<\x00\x00\xF0\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>me/64.0.3282.186 ...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-10 23:47:48,529 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@7d671c30{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-10 23:47:58,791 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=244,c=16384,r=243]={\x00<<<\x00\x00\xF0\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>bKit/537.36 (KHTM...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-59
+2018-03-10 23:47:58,799 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@229dbfe2{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-59
+2018-03-11 00:01:43,063 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp2088411935-58
+2018-03-11 00:05:05,238 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>37.36 (KHTML, lik...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-11 00:05:05,240 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@23525e82{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-11 00:05:10,259 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5be89a76[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>ko) Chrome/64.0.3...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-11 00:05:10,261 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@440be8d2{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-11 00:05:15,292 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>37.36 (KHTML, lik...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-62
+2018-03-11 00:05:15,296 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@61c1ec50{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-62
+2018-03-11 00:05:20,315 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5be89a76[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>ko) Chrome/64.0.3...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-11 00:05:20,316 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@5def8341{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-11 00:05:25,342 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>37.36 (KHTML, lik...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-11 00:05:25,343 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@2a1767d5{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-11 00:05:30,365 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5be89a76[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>ko) Chrome/64.0.3...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-62
+2018-03-11 00:05:30,373 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@8757f4b{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-62
+2018-03-11 00:05:35,438 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>37.36 (KHTML, lik...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-11 00:05:35,452 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@24dcb58{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-11 00:05:40,470 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5be89a76[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>ko) Chrome/64.0.3...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-11 00:05:40,478 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@7424a62{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-11 00:05:45,500 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>37.36 (KHTML, lik...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-62
+2018-03-11 00:05:45,512 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@f5e11ca{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-62
+2018-03-11 00:05:50,530 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5be89a76[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>ko) Chrome/64.0.3...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-11 00:05:50,542 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@6496fd75{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-11 00:05:55,568 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>37.36 (KHTML, lik...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-11 00:05:55,586 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@3a243a17{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-11 00:06:00,611 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5be89a76[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>ko) Chrome/64.0.3...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-62
+2018-03-11 00:06:00,623 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@1563b5d5{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-62
+2018-03-11 00:06:05,643 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>37.36 (KHTML, lik...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-11 00:06:05,648 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@6f8097eb{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-11 00:06:10,658 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5be89a76[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>ko) Chrome/64.0.3...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-11 00:06:10,665 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@25e89da2{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-11 00:06:15,689 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>37.36 (KHTML, lik...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-62
+2018-03-11 00:06:15,690 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@467a6650{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-62
+2018-03-11 00:06:20,714 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5be89a76[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>ko) Chrome/64.0.3...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-11 00:06:20,718 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@6f009987{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-11 00:06:25,727 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>37.36 (KHTML, lik...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-11 00:06:25,741 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@15b7610e{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-11 00:06:30,762 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5be89a76[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>ko) Chrome/64.0.3...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-62
+2018-03-11 00:06:30,775 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@29d7c8e2{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-62
+2018-03-11 00:06:35,796 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>37.36 (KHTML, lik...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-11 00:06:35,802 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@4c8cfb04{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-11 00:06:40,816 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5be89a76[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>ko) Chrome/64.0.3...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-11 00:06:40,826 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@7aaa135c{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-11 00:06:45,851 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>37.36 (KHTML, lik...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-62
+2018-03-11 00:06:45,856 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@3baf637c{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-62
+2018-03-11 00:06:50,869 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5be89a76[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>ko) Chrome/64.0.3...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-11 00:06:50,871 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@5342fd2{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-49
+2018-03-11 00:06:55,905 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@45181d4a[p=1,l=262,c=16384,r=261]={\x00<<<\x00\x01\x02\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>37.36 (KHTML, lik...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-11 00:06:55,912 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@5e813d38{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp2088411935-58
+2018-03-11 00:33:37,583 | INFO  | Connector vm://localhost stopped | org.apache.activemq.broker.TransportConnector | org.eclipse.jetty.server.session.HashSessionManager@928ea31Timer
+2018-03-11 00:54:27,553 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55927-1520703395097-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-03-11 00:54:27,556 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-03-11 00:54:27,556 | INFO  | socketQueue interrupted - stopping | org.apache.activemq.transport.tcp.TcpTransportServer | ActiveMQ Transport Server Thread Handler: tcp://0.0.0.0:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2018-03-11 00:54:27,558 | INFO  | socketQueue interrupted - stopping | org.apache.activemq.transport.tcp.TcpTransportServer | ActiveMQ Transport Server Thread Handler: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2018-03-11 00:54:27,561 | INFO  | Could not accept connection during shutdown  : java.lang.InterruptedException | org.apache.activemq.broker.TransportConnector | ActiveMQ Transport Server Thread Handler: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2018-03-11 00:54:27,558 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-03-11 00:54:27,560 | INFO  | Could not accept connection during shutdown  : java.lang.InterruptedException | org.apache.activemq.broker.TransportConnector | ActiveMQ Transport Server Thread Handler: tcp://0.0.0.0:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2018-03-11 00:54:27,565 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-03-11 00:54:27,568 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-03-11 00:54:27,582 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-03-11 00:54:27,590 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-03-11 00:54:27,592 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-03-11 00:54:27,593 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-03-11 00:54:27,594 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-03-11 00:54:27,774 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55927-1520703395097-0:1) uptime 1 hour 47 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-03-11 00:54:27,774 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-55927-1520703395097-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-03-11 00:54:27,774 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@84203da: startup date [Sat Mar 10 23:06:34 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-03-11 00:54:27,799 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2018-03-11 12:06:35,821 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@44df1ebf: startup date [Sun Mar 11 12:06:35 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | WrapperSimpleAppMain
+2018-03-11 12:06:36,956 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\kahadb] | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-11 12:06:37,204 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2018-03-11 12:06:37,236 | INFO  | Recovering from the journal @1:3473 | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2018-03-11 12:06:37,266 | INFO  | Recovery replayed 1284 operations from the journal in 0.041 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2018-03-11 12:06:37,275 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | WrapperSimpleAppMain
+2018-03-11 12:06:37,435 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-65422-1520750197288-0:1) is starting | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-11 12:06:37,540 | INFO  | Listening for connections at: tcp://DESKTOP-55AGI0I:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-11 12:06:37,541 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-11 12:06:37,546 | INFO  | Listening for connections at: amqp://DESKTOP-55AGI0I:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-11 12:06:37,547 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-11 12:06:37,550 | INFO  | Listening for connections at: stomp://DESKTOP-55AGI0I:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-11 12:06:37,551 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-11 12:06:37,554 | INFO  | Listening for connections at: mqtt://DESKTOP-55AGI0I:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-11 12:06:37,555 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-11 12:06:37,672 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@523447ba{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | WrapperSimpleAppMain
+2018-03-11 12:06:37,735 | INFO  | Listening for connections at ws://DESKTOP-55AGI0I:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | WrapperSimpleAppMain
+2018-03-11 12:06:37,736 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-11 12:06:37,737 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-65422-1520750197288-0:1) started | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-11 12:06:37,738 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-11 12:06:38,386 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | WrapperSimpleAppMain
+2018-03-11 12:06:38,503 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | WrapperSimpleAppMain
+2018-03-11 12:06:38,504 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | WrapperSimpleAppMain
+2018-03-11 12:06:38,562 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | WrapperSimpleAppMain
+2018-03-11 12:06:38,770 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | WrapperSimpleAppMain
+2018-03-11 12:06:38,876 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | WrapperSimpleAppMain
+2018-03-11 12:09:26,462 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:09:26,466 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@6072c98{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:09:31,488 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-63
+2018-03-11 12:09:31,491 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@3015bb1a{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-63
+2018-03-11 12:09:36,503 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:09:36,505 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@cb86d20{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:09:41,511 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-64
+2018-03-11 12:09:41,513 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@7abeb3c6{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-64
+2018-03-11 12:09:46,519 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:09:46,521 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@7dfd6c1f{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:09:51,537 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:09:51,539 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@562170c{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:09:56,544 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-63
+2018-03-11 12:09:56,546 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@7277f7ba{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-63
+2018-03-11 12:10:01,550 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:10:01,552 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@5d504bbc{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:10:06,557 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-64
+2018-03-11 12:10:06,559 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@6afca19a{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-64
+2018-03-11 12:10:11,564 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:10:11,566 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@381414d0{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:10:16,574 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:10:16,579 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@6442036d{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:10:21,584 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-63
+2018-03-11 12:10:21,587 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@6c9396f0{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-63
+2018-03-11 12:10:26,596 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:10:26,597 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@6a46ce5d{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:10:31,603 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-64
+2018-03-11 12:10:31,605 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@26cb04ca{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-64
+2018-03-11 12:10:36,614 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:10:36,619 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@2c962a6a{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:10:41,632 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-64
+2018-03-11 12:10:41,634 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@155ab8e2{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-64
+2018-03-11 12:10:46,638 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:10:46,640 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@2dc5b933{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:10:51,645 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-64
+2018-03-11 12:10:51,648 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@1ce50281{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-64
+2018-03-11 12:10:56,658 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:10:56,660 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@6337a4ef{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:11:01,667 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-64
+2018-03-11 12:11:01,678 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@251951d9{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-64
+2018-03-11 12:11:06,694 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:11:06,696 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@29da9012{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:11:11,703 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-64
+2018-03-11 12:11:11,705 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@2c5f9902{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-64
+2018-03-11 12:11:16,710 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:11:16,713 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@51af78c5{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:11:21,717 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-64
+2018-03-11 12:11:21,719 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@1bceea73{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-64
+2018-03-11 12:11:26,729 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:11:26,733 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@2cddc5bc{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:11:31,741 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:11:31,746 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@9c40133{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:11:36,755 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:11:36,760 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@4d772800{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:11:41,768 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:11:41,770 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@cfaa93{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:11:46,777 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:11:46,783 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@6499395f{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:11:51,787 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:11:51,789 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@4d8d33b8{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:11:56,797 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:11:56,802 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@7aaa683b{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:12:01,808 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:12:01,812 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@72ea4c87{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:12:06,826 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:12:06,833 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@66f3cd9b{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:12:11,846 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:12:11,853 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@47a631e9{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:12:16,867 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:12:16,874 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@6b70b9dc{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:12:21,884 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:12:21,886 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@5ce175e1{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:12:26,895 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:12:26,902 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@fb49e6{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:12:31,914 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:12:31,917 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@30e59329{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:12:36,924 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:12:36,928 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@a46e808{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:12:41,935 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:12:41,937 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@7371a768{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:12:46,943 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:12:46,945 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@27f783c2{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:12:51,954 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:12:51,960 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@3f441043{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:12:56,973 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>2.186 Safari/537....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:12:56,980 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@6af38ac6{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-54
+2018-03-11 12:13:01,991 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@2d85bbe8[p=1,l=260,c=16384,r=259]={\x00<<<\x00\x01\x00\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>36\r\nAccept: image...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:13:01,993 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@5b6e0535{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-60
+2018-03-11 12:15:18,962 | WARN  | Illegal character 0x0 in state=START for buffer HeapByteBuffer@5ed01473[p=1,l=244,c=16384,r=243]={\x00<<<\x00\x00\xF0\x01ActiveMQ\x00\x00\x00\x0b\x01...lDelay\x06\x00\x00\x00\x00\x00\x00'\x10>>>alDelay\x06\x00\x00\x00\x00\x00\x00'\x102...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:15:18,965 | WARN  | badMessage: 400 Illegal character 0x0 for HttpChannelOverHttp@d603fe3{r=0,c=false,a=IDLE,uri=-} | org.eclipse.jetty.http.HttpParser | qtp1555864476-62
+2018-03-11 12:15:38,514 | WARN  | Transport Connection to: tcp://127.0.0.1:49294 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:49294@61616
+2018-03-11 12:23:21,264 | WARN  | Transport Connection to: tcp://127.0.0.1:49300 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:49300@61616
+2018-03-11 12:42:45,662 | WARN  | Transport Connection to: tcp://127.0.0.1:49416 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:49416@61616
+2018-03-11 18:04:47,873 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-65422-1520750197288-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-24
+2018-03-11 18:04:47,922 | INFO  | socketQueue interrupted - stopping | org.apache.activemq.transport.tcp.TcpTransportServer | ActiveMQ Transport Server Thread Handler: tcp://0.0.0.0:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2018-03-11 18:04:47,922 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-24
+2018-03-11 18:04:47,930 | INFO  | Could not accept connection during shutdown  : java.lang.InterruptedException | org.apache.activemq.broker.TransportConnector | ActiveMQ Transport Server Thread Handler: tcp://0.0.0.0:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2018-03-11 18:04:47,932 | INFO  | socketQueue interrupted - stopping | org.apache.activemq.transport.tcp.TcpTransportServer | ActiveMQ Transport Server Thread Handler: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2018-03-11 18:04:47,935 | INFO  | Could not accept connection during shutdown  : java.lang.InterruptedException | org.apache.activemq.broker.TransportConnector | ActiveMQ Transport Server Thread Handler: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2018-03-11 18:04:47,932 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-24
+2018-03-11 18:04:47,938 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-24
+2018-03-11 18:04:47,940 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-24
+2018-03-11 18:04:47,975 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-24
+2018-03-11 18:04:47,990 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-24
+2018-03-11 18:04:47,991 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-24
+2018-03-11 18:04:47,991 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-24
+2018-03-11 18:04:47,993 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-24
+2018-03-11 18:04:48,150 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-65422-1520750197288-0:1) uptime 5 hours 58 minutes | org.apache.activemq.broker.BrokerService | Thread-24
+2018-03-11 18:04:48,151 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-65422-1520750197288-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-24
+2018-03-11 18:04:48,152 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@44df1ebf: startup date [Sun Mar 11 12:06:35 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-24
+2018-03-11 18:04:48,191 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-24
+2018-03-12 05:52:58,816 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@44df1ebf: startup date [Mon Mar 12 05:52:58 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | WrapperSimpleAppMain
+2018-03-12 05:53:00,284 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\kahadb] | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-12 05:53:00,549 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2018-03-12 05:53:00,645 | INFO  | Recovering from the journal @1:156744 | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2018-03-12 05:53:00,758 | INFO  | Recovery replayed 4255 operations from the journal in 0.168 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2018-03-12 05:53:00,781 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | WrapperSimpleAppMain
+2018-03-12 05:53:01,062 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-53634-1520814180811-0:1) is starting | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-12 05:53:01,196 | INFO  | Listening for connections at: tcp://DESKTOP-55AGI0I:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-12 05:53:01,197 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-12 05:53:01,204 | INFO  | Listening for connections at: amqp://DESKTOP-55AGI0I:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-12 05:53:01,206 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-12 05:53:01,209 | INFO  | Listening for connections at: stomp://DESKTOP-55AGI0I:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-12 05:53:01,212 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-12 05:53:01,216 | INFO  | Listening for connections at: mqtt://DESKTOP-55AGI0I:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-12 05:53:01,217 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-12 05:53:01,357 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@523447ba{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | WrapperSimpleAppMain
+2018-03-12 05:53:01,429 | INFO  | Listening for connections at ws://DESKTOP-55AGI0I:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | WrapperSimpleAppMain
+2018-03-12 05:53:01,431 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-12 05:53:01,432 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-53634-1520814180811-0:1) started | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-12 05:53:01,432 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-12 05:53:02,324 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | WrapperSimpleAppMain
+2018-03-12 05:53:02,461 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | WrapperSimpleAppMain
+2018-03-12 05:53:02,462 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | WrapperSimpleAppMain
+2018-03-12 05:53:02,539 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | WrapperSimpleAppMain
+2018-03-12 05:53:02,823 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | WrapperSimpleAppMain
+2018-03-12 05:53:02,955 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | WrapperSimpleAppMain
+2018-03-12 06:01:38,807 | WARN  | Transport Connection to: tcp://127.0.0.1:53698 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53698@61616
+2018-03-12 06:04:26,812 | WARN  | Transport Connection to: tcp://127.0.0.1:53804 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53804@61616
+2018-03-12 06:04:36,292 | WARN  | Transport Connection to: tcp://127.0.0.1:53829 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53829@61616
+2018-03-12 06:04:36,295 | WARN  | Transport Connection to: tcp://127.0.0.1:53828 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53828@61616
+2018-03-12 06:08:10,963 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp1555864476-60
+2018-03-12 06:18:50,087 | WARN  | Transport Connection to: tcp://127.0.0.1:53874 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53874@61616
+2018-03-12 06:18:50,087 | WARN  | Transport Connection to: tcp://127.0.0.1:53875 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53875@61616
+2018-03-12 06:20:50,755 | WARN  | Transport Connection to: tcp://127.0.0.1:54038 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54038@61616
+2018-03-12 06:20:50,756 | WARN  | Transport Connection to: tcp://127.0.0.1:54039 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54039@61616
+2018-03-12 06:20:50,755 | WARN  | Transport Connection to: tcp://127.0.0.1:54040 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:54040@61616
+2018-03-12 06:20:56,532 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-53634-1520814180811-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-24
+2018-03-12 06:20:56,538 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-24
+2018-03-12 06:20:56,540 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-24
+2018-03-12 06:20:56,547 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-24
+2018-03-12 06:20:56,550 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-24
+2018-03-12 06:20:56,567 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-24
+2018-03-12 06:20:56,579 | INFO  | Connector vm://localhost stopped | org.apache.activemq.broker.TransportConnector | Thread-24
+2018-03-12 06:20:56,595 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-24
+2018-03-12 06:20:56,597 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-24
+2018-03-12 06:20:56,600 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-24
+2018-03-12 06:20:56,603 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-24
+2018-03-12 06:20:56,775 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-53634-1520814180811-0:1) uptime 27 minutes | org.apache.activemq.broker.BrokerService | Thread-24
+2018-03-12 06:20:56,781 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-53634-1520814180811-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-24
+2018-03-12 06:20:56,783 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@44df1ebf: startup date [Mon Mar 12 05:52:58 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-24
+2018-03-12 06:20:56,800 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-24
+2018-03-12 10:12:14,720 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@84203da: startup date [Mon Mar 12 10:12:14 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | WrapperSimpleAppMain
+2018-03-12 10:12:15,361 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\kahadb] | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-12 10:12:15,674 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2018-03-12 10:12:15,736 | INFO  | Recovering from the journal @1:721070 | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2018-03-12 10:12:15,752 | INFO  | Recovery replayed 26 operations from the journal in 0.016 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2018-03-12 10:12:15,752 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | WrapperSimpleAppMain
+2018-03-12 10:12:15,892 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-56076-1520829735767-0:1) is starting | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-12 10:12:15,986 | INFO  | Listening for connections at: tcp://DESKTOP-55AGI0I:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-12 10:12:15,986 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-12 10:12:15,986 | INFO  | Listening for connections at: amqp://DESKTOP-55AGI0I:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-12 10:12:15,986 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-12 10:12:16,002 | INFO  | Listening for connections at: stomp://DESKTOP-55AGI0I:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-12 10:12:16,002 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-12 10:12:16,002 | INFO  | Listening for connections at: mqtt://DESKTOP-55AGI0I:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2018-03-12 10:12:16,002 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-12 10:12:16,064 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@3ffcb87c{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | WrapperSimpleAppMain
+2018-03-12 10:12:16,127 | INFO  | Listening for connections at ws://DESKTOP-55AGI0I:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | WrapperSimpleAppMain
+2018-03-12 10:12:16,127 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2018-03-12 10:12:16,127 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-56076-1520829735767-0:1) started | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-12 10:12:16,127 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2018-03-12 10:12:16,408 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | WrapperSimpleAppMain
+2018-03-12 10:12:16,595 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | WrapperSimpleAppMain
+2018-03-12 10:12:16,595 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | WrapperSimpleAppMain
+2018-03-12 10:12:16,658 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | WrapperSimpleAppMain
+2018-03-12 10:12:16,845 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | WrapperSimpleAppMain
+2018-03-12 10:12:16,986 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | WrapperSimpleAppMain
+2018-03-12 10:25:39,310 | WARN  | Transport Connection to: tcp://127.0.0.1:56120 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:56120@61616
+2018-03-12 10:25:39,310 | WARN  | Transport Connection to: tcp://127.0.0.1:56119 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:56119@61616
+2018-03-12 10:25:39,310 | WARN  | Transport Connection to: tcp://127.0.0.1:56118 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:56118@61616
+2018-03-12 10:27:34,565 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp1366946683-98
+2018-03-12 10:29:52,932 | WARN  | Transport Connection to: tcp://127.0.0.1:56341 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:56341@61616
+2018-03-12 10:29:52,946 | WARN  | Transport Connection to: tcp://127.0.0.1:56343 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:56343@61616
+2018-03-12 10:29:52,932 | WARN  | Transport Connection to: tcp://127.0.0.1:56342 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:56342@61616
+2018-03-12 10:32:20,401 | WARN  | Transport Connection to: tcp://127.0.0.1:56418 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:56418@61616
+2018-03-12 10:33:35,864 | WARN  | Transport Connection to: tcp://127.0.0.1:56439 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:56439@61616
+2018-03-12 10:34:23,084 | WARN  | Transport Connection to: tcp://127.0.0.1:56462 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:56462@61616
+2018-03-12 10:34:23,095 | WARN  | Transport Connection to: tcp://127.0.0.1:56464 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:56464@61616
+2018-03-12 10:34:23,095 | WARN  | Transport Connection to: tcp://127.0.0.1:56463 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:56463@61616
+2018-03-12 16:51:13,658 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-56076-1520829735767-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-26
+2018-03-12 16:51:13,687 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-26
+2018-03-12 16:51:13,689 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-26
+2018-03-12 16:51:13,691 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-26
+2018-03-12 16:51:13,693 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-26
+2018-03-12 16:51:13,723 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-26
+2018-03-12 16:51:13,730 | INFO  | Connector vm://localhost stopped | org.apache.activemq.broker.TransportConnector | Thread-26
+2018-03-12 16:51:13,750 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-26
+2018-03-12 16:51:13,751 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-26
+2018-03-12 16:51:13,752 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-26
+2018-03-12 16:51:13,753 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-26
+2018-03-12 16:51:13,942 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-56076-1520829735767-0:1) uptime 6 hours 38 minutes | org.apache.activemq.broker.BrokerService | Thread-26
+2018-03-12 16:51:13,944 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-56076-1520829735767-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-26
+2018-03-12 16:51:13,947 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@84203da: startup date [Mon Mar 12 10:12:14 IST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-26
+2018-03-12 16:51:13,959 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-26
+2021-02-09 20:02:32,240 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1ce51572: startup date [Tue Feb 09 20:02:32 IST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | WrapperSimpleAppMain
+2021-02-09 20:02:33,342 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\kahadb] | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2021-02-09 20:02:33,690 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2021-02-09 20:02:33,728 | INFO  | Recovering from the journal @1:801944 | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2021-02-09 20:02:33,859 | INFO  | Recovery replayed 4393 operations from the journal in 0.142 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2021-02-09 20:02:33,875 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | WrapperSimpleAppMain
+2021-02-09 20:02:34,029 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-52312-1612881153890-0:1) is starting | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2021-02-09 20:02:34,108 | INFO  | Listening for connections at: tcp://DESKTOP-55AGI0I:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2021-02-09 20:02:34,108 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2021-02-09 20:02:34,108 | INFO  | Listening for connections at: amqp://DESKTOP-55AGI0I:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2021-02-09 20:02:34,108 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2021-02-09 20:02:34,124 | INFO  | Listening for connections at: stomp://DESKTOP-55AGI0I:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2021-02-09 20:02:34,124 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2021-02-09 20:02:34,129 | INFO  | Listening for connections at: mqtt://DESKTOP-55AGI0I:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2021-02-09 20:02:34,129 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2021-02-09 20:02:34,220 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@3a27195c{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | WrapperSimpleAppMain
+2021-02-09 20:02:34,291 | INFO  | Listening for connections at ws://DESKTOP-55AGI0I:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | WrapperSimpleAppMain
+2021-02-09 20:02:34,291 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2021-02-09 20:02:34,291 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-52312-1612881153890-0:1) started | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2021-02-09 20:02:34,291 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2021-02-09 20:02:34,953 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | WrapperSimpleAppMain
+2021-02-09 20:02:35,137 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | WrapperSimpleAppMain
+2021-02-09 20:02:35,137 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | WrapperSimpleAppMain
+2021-02-09 20:02:35,200 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | WrapperSimpleAppMain
+2021-02-09 20:02:35,469 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | WrapperSimpleAppMain
+2021-02-09 20:02:36,054 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | WrapperSimpleAppMain
+2021-02-09 20:04:57,410 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-52312-1612881153890-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-25
+2021-02-09 20:04:57,410 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-25
+2021-02-09 20:04:57,425 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-25
+2021-02-09 20:04:57,425 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-25
+2021-02-09 20:04:57,425 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-25
+2021-02-09 20:04:57,494 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-25
+2021-02-09 20:04:57,510 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-25
+2021-02-09 20:04:57,510 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-25
+2021-02-09 20:04:57,510 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-25
+2021-02-09 20:04:57,510 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-25
+2021-02-09 20:04:57,741 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-52312-1612881153890-0:1) uptime 2 minutes | org.apache.activemq.broker.BrokerService | Thread-25
+2021-02-09 20:04:57,741 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-52312-1612881153890-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-25
+2021-02-09 20:04:57,741 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@1ce51572: startup date [Tue Feb 09 20:02:32 IST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-25
+2021-02-09 20:04:57,757 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-25
+2021-02-09 21:15:24,550 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@5cb5415c: startup date [Tue Feb 09 21:15:24 IST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | WrapperSimpleAppMain
+2021-02-09 21:15:25,991 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\kahadb] | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2021-02-09 21:15:26,523 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2021-02-09 21:15:26,554 | INFO  | Recovering from the journal @1:1910470 | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2021-02-09 21:15:26,568 | INFO  | Recovery replayed 29 operations from the journal in 0.03 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2021-02-09 21:15:26,568 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | WrapperSimpleAppMain
+2021-02-09 21:15:26,746 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-53289-1612885526599-0:1) is starting | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2021-02-09 21:15:26,884 | INFO  | Listening for connections at: tcp://DESKTOP-55AGI0I:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2021-02-09 21:15:26,884 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2021-02-09 21:15:26,884 | INFO  | Listening for connections at: amqp://DESKTOP-55AGI0I:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2021-02-09 21:15:26,884 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2021-02-09 21:15:26,900 | INFO  | Listening for connections at: stomp://DESKTOP-55AGI0I:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2021-02-09 21:15:26,900 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2021-02-09 21:15:26,900 | INFO  | Listening for connections at: mqtt://DESKTOP-55AGI0I:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2021-02-09 21:15:26,900 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2021-02-09 21:15:27,116 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1d10e1dc{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | WrapperSimpleAppMain
+2021-02-09 21:15:27,245 | INFO  | Listening for connections at ws://DESKTOP-55AGI0I:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | WrapperSimpleAppMain
+2021-02-09 21:15:27,250 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2021-02-09 21:15:27,252 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-53289-1612885526599-0:1) started | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2021-02-09 21:15:27,252 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2021-02-09 21:15:27,817 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | WrapperSimpleAppMain
+2021-02-09 21:15:28,105 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | WrapperSimpleAppMain
+2021-02-09 21:15:28,105 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | WrapperSimpleAppMain
+2021-02-09 21:15:28,179 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | WrapperSimpleAppMain
+2021-02-09 21:15:28,594 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | WrapperSimpleAppMain
+2021-02-09 21:15:29,062 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | WrapperSimpleAppMain
+2021-02-09 21:18:46,802 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-53289-1612885526599-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2021-02-09 21:18:46,807 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2021-02-09 21:18:46,809 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2021-02-09 21:18:46,812 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2021-02-09 21:18:46,817 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2021-02-09 21:18:46,830 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2021-02-09 21:18:46,842 | INFO  | PListStore:[E:\software\A08\file\apache-activemq-5.14.0-bin\apache-activemq-5.14.0\bin\win64\..\..\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2021-02-09 21:18:46,843 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2021-02-09 21:18:46,844 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2021-02-09 21:18:46,847 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2021-02-09 21:18:46,984 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-53289-1612885526599-0:1) uptime 3 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2021-02-09 21:18:46,986 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:DESKTOP-55AGI0I-53289-1612885526599-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2021-02-09 21:18:46,988 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@5cb5415c: startup date [Tue Feb 09 21:15:24 IST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2021-02-09 21:18:47,008 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
