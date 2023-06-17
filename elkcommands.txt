@@ -1,1 +1,4 @@
 http://localhost:9200/_cat/indices?v
+
+filebeat.exe -c filebeat.yml -e -d "*"
+
