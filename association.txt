@@ -81,11 +81,11 @@ POST /customersv1/_doc/2?routing=customer1
 GET /customersv1/_search 
 {
    "query":{
-      "has_child":{
-         "child_type":"account",
+      "has_parent":{
+         "parent_type":"customer",
          "query":{
             "match":{
-               "runningTotal":279723
+               "customerId":1
             }
          }
       }
