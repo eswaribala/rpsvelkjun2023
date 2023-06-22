@@ -67,7 +67,22 @@ POST /books/_search
 }
 
 =====================================================
-
+POST /books/_search
+{
+  "query": {
+    
+        "bool" : { 
+          "should": [
+            { "match": { "title": "Elasticsearch" }},
+            { "match": { "title": "Solr" }} 
+          ],
+         "must": { "match": { "authors": "clinton gormely" }} 
+         
+        }
+     
+  }
+}
+======================================================
 POST /bookdb_index/book/_search
 {
   "query": {
