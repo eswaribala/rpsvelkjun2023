@@ -51,3 +51,43 @@ PUT /customersv1
 }
 }
 }
+
+===============================
+POST /customersv1/_doc/1?routing=customer1
+{
+  "customerId":1,
+  "name":{
+    "firstName":"Parameswari",
+    "middleName":"",
+    "lastName":"Bala"
+  },
+  "email":"param@gmail.com",
+  "contactNo":9952032862,
+  "customer_account": {
+    "name": "customer"
+  }
+}
+=============================================
+POST /customersv1/_doc/2?routing=customer1
+{
+  "runningTotal":279723,
+  "doc":"2023-01-01",
+  "customer_account": {
+    "name": "account",
+    "parent": 1
+  }
+}
+=============================================
+GET /customersv1/_search 
+{
+   "query":{
+      "has_child":{
+         "child_type":"account",
+         "query":{
+            "match":{
+               "runningTotal":279723
+            }
+         }
+      }
+   }
+}
