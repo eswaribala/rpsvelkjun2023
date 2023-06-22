@@ -51,6 +51,22 @@ POST /bookdb_index/book/_search
     "_source": ["title", "summary", "publish_date"]
 }
 --------------------------------------------------------------
+POST /books/_search
+{
+  "query": {
+    
+        "bool" : { 
+          "should": [
+            { "match": { "title": "Elasticsearch" }},
+            { "match": { "title": "Solr" }} 
+          ]
+         
+        }
+     
+  }
+}
+
+=====================================================
 
 POST /bookdb_index/book/_search
 {
