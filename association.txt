@@ -91,3 +91,16 @@ GET /customersv1/_search
       }
    }
 }
+===============================================
+GET customersv1/_search
+{
+  "query": {
+    "has_child": {
+      "type": "account",
+      "query": {
+        "match_all": {}
+      }
+     
+    }
+  }
+}
