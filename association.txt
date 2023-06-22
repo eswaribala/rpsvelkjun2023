@@ -78,6 +78,17 @@ POST /customersv1/_doc/2?routing=customer1
   }
 }
 =============================================
+POST /customersv1/_doc/3?routing=customer1
+{
+  "runningTotal":279745,
+  "doc":"2023-05-01",
+  "customer_account": {
+    "name": "account",
+    "parent": 1
+  }
+}
+
+==============================================
 GET /customersv1/_search 
 {
    "query":{
