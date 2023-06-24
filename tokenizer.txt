@@ -59,7 +59,7 @@ path hierarchy
 POST _analyze
 {
   "tokenizer": "path_hierarchy",
-  "text": "/one/two/three"
+  "text": "G:/Local disk/ElasticSearch/elasticcourse/course-material/Adding Boolean Logic to Queries"
 }
 =================================
 custom query
