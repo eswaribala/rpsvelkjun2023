@@ -111,7 +111,7 @@ POST /employee_index_analyze/_doc/2
   "name": "Jayanthi",
   "profession": "Doctor"
 }
-On hold
+
 
 
 ==============================================
