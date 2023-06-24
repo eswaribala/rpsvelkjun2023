@@ -47,4 +47,8 @@ POST /_analyze
 "analyzer": "whitespace"
 }
 
-
+POST /_analyze
+{
+"text": "I'm  travelling to Bangalore on 28th June 2023 @ 5.00 am",
+"analyzer": "keyword"
+}
