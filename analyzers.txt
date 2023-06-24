@@ -28,5 +28,23 @@ POST my-index-000001/_analyze
 
 
 ============================================================================
+POST /_analyze
+{
+"text": "I'm  travelling to Bangalore on 28th June 2023 @ 5.00 am",
+"analyzer": "simple"
+}
+
+
+POST /_analyze
+{
+"text": "I will be travelling to Bangalore on 28th June 2023",
+"analyzer": "standard"
+}
+
+POST /_analyze
+{
+"text": "I'm  travelling to Bangalore on 28th June 2023 @ 5.00 am",
+"analyzer": "whitespace"
+}
 
 
