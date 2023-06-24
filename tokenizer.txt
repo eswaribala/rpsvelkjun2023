@@ -48,11 +48,12 @@ PUT my-index-000001
   }
 }
 
-POST my-index-000001/_analyze
+POST ngram_index/_analyze
 {
   "analyzer": "my_analyzer",
-  "text": "2 Quick Foxes."
+  "text": "9557756 shines bright Farenheit"
 }
+
 =================================================
 path hierarchy
 POST _analyze
