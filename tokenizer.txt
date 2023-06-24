@@ -62,6 +62,48 @@ POST _analyze
   "text": "G:/Local disk/ElasticSearch/elasticcourse/course-material/Adding Boolean Logic to Queries"
 }
 =================================
+PUT /employee_index_analyze
+{
+   "settings": {
+    "analysis": {
+      "analyzer": {
+        "my_analyzer": {
+          "tokenizer": "my_tokenizer"
+        }
+      },
+      "tokenizer": {
+        "my_tokenizer": {
+          "type": "ngram",
+          "min_gram": 3,
+          "max_gram": 3,
+          "token_chars": [
+            "letter",
+            "digit"
+          ]
+        }
+      }
+    }
+  },
+  
+  "mappings": {
+    "properties": {
+    "name": {
+      "type": "text",
+      "analyzer": "my_analyzer"
+    },
+    "profession": {
+      "type": "text",
+      "analyzer": "standard"
+    }
+  }
+    
+  }
+}
+
+
+
+
+==============================================
 custom query
 PUT my-index-000001
 {
