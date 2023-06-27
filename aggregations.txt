@@ -182,6 +182,19 @@ GET /order/_search
   }
 }
 
+GET /orders/_search
+{
+  "size": 0,
+  "aggs": {
+    "orders_over_time": {
+      "date_histogram": {
+        "field": "purchased_at",
+        "interval": "month"
+      }
+    }
+  }
+}
+
 GET /order/_search
 {
   "size": 0, 
