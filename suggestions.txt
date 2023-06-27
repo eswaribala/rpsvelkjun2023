@@ -130,3 +130,16 @@ POST music/_doc/1?refresh
     "weight":3
   }
 }
+POST music/_doc/2?refresh
+{
+  "suggest":[{
+    "input":"saregamapa",
+    "weight":2
+  },
+  {
+    "input":"Malligaye",
+    "weight":1
+  }
+  ]
+  
+}
