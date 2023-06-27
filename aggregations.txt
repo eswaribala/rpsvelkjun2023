@@ -350,3 +350,30 @@ GET /recipe/default/_search
     }
   }
 }
+
+
+GET /orders/_search
+{
+  "size": 0,
+  "query": {
+    "range": {
+      "total_amount": {
+        "gte": 100
+      }
+    }
+  },
+  "aggs": {
+    "status_terms": {
+      "terms": {
+        "field": "salesman.id"
+      },
+      "aggs": {
+        "status_stats": {
+          "stats": {
+            "field": "total_amount"
+          }
+        }
+      }
+    }
+  }
+}
