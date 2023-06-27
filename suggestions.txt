@@ -108,3 +108,18 @@ POST jobs/_search
     }
   }
 }
+-----------------------------
+PUT music
+{
+  "mappings": {
+"properties": {
+  "suggest":{
+"type": "completion"
+  },
+  "title":{
+    "type": "keyword"
+  }
+}
+  }
+}
+
