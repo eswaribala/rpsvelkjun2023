@@ -258,3 +258,23 @@ GET /order/_search
   
 }
 }
+
+GET /orders/_search
+{
+  "size": 0,
+  "aggs": {
+    "orders_without_status": {
+      "missing": {
+        "field": "salesman.id"
+      },
+      "aggs": {
+        "missing_sum": {
+          "sum": {
+            "field": "total_amount"
+          }
+        }
+      }
+    }
+  }
+}
+
