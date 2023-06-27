@@ -155,3 +155,15 @@ OST music/_search?pretty
     }
   }
 }
+
+POST music/_search?pretty
+{
+"suggest": {
+    "SONG_SUGGESTION": {
+      "regex": "n[a-zA-Z]*r",
+      "completion": {
+        "field": "suggest"
+      }
+    }
+  }
+}
