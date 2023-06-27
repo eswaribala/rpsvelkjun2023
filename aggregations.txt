@@ -155,6 +155,37 @@ GET /order/_search
   }
 }
 
+
+
+GET /orders/_search
+{
+  "size": 0,
+  "aggs": {
+    "purchased_ranges": {
+      "date_range": {
+        "field": "purchased_at",
+        "ranges": [
+          {
+            "from": "2016-01-01",
+            "to": "2016-01-01||+6M"
+          },
+          {
+            "from": "2016-01-01||+6M",
+            "to": "2016-01-01||+1y"
+          }
+        ]
+      },
+      
+      "aggs": {
+        "bucket_stats": {
+          "stats": {
+            "field": "total_amount"
+          }
+        }
+      }
+    }
+  }
+}
 //bucket query
 
 GET /order/_search
