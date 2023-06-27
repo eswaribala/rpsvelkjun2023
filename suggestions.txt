@@ -143,3 +143,15 @@ POST music/_doc/2?refresh
   ]
   
 }
+
+OST music/_search?pretty
+{
+"suggest": {
+    "SONG_SUGGESTION": {
+      "prefix": "never",
+      "completion": {
+        "field": "suggest"
+      }
+    }
+  }
+}
