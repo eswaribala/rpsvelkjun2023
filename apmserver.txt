@@ -1,4 +1,13 @@
+go to G:\Local disk\microservicedotnet\ELK
+run docker compose file for elastic server
+
+go to powershell
+cd  H:\ELK\apm-server-7.15.0-windows-x86_64\apm-server-7.15.0-windows-x86_64
 ./apm-server -e -E output.elasticsearch.hosts=localhost:9200 -E apm-server.host=localhost:8200 
+
+go to f:\ericmsjuly2021 folder
+choose folder spring-boot-elk
+run the following command
 
 java -javaagent:"D:\ELK\apm-server-7.15.0-windows-x86_64elastic-apm-agent-1.26.0.jar" \
 -Delastic.apm.service_name=sb-elk \
