@@ -1,4 +1,5 @@
 ./apm-server -e -E output.elasticsearch.hosts=localhost:9200 -E apm-server.host=localhost:8200 
+
 java -javaagent:"D:\ELK\apm-server-7.15.0-windows-x86_64elastic-apm-agent-1.26.0.jar" \
 -Delastic.apm.service_name=sb-elk \
 -Delastic.apm.server_urls=http://localhost:8200 \
